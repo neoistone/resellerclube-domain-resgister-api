@@ -37,8 +37,8 @@ class domainapi
 		//decting params corret way
 		if(is_array($x['0'])){ $params = $x['0'];  $cmd = $x['1']; }else{ $params = $x['1']; $cmd = $x['0']; }
 		if(is_array($x['1'])){ $params = $x['1'];  $cmd = $x['0']; }else{ $params = $x['0']; $cmd = $x['1']; }
-       self::api .= strtolower($cmd).".".strtolower(self::response);
-       self::api .= "?auth-userid=".self::api_key;
+           self::api .= strtolower($cmd).".".strtolower(self::response);
+           self::api .= "?auth-userid=".self::api_key;
 	   self::api .= "&api-key=".self::api_secure;
 	   foreach($params as $key => $value) {
            self::api .= '&'.urlencode($key).'='.urlencode($value);
